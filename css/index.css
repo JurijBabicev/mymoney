@@ -1,0 +1,13 @@
+.custom_container {
+    height: 100vh;
+    position: relative;
+}
+
+.menu_container {
+    /* border: 1px solid gray; */
+    max-width: 576px!important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
