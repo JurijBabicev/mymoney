@@ -7,7 +7,29 @@
     /* border: 1px solid gray; */
     max-width: 576px!important;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.fun_ico_piggy {
+        /* display: block; */
+        width: 160px;
+        height: 160px;
+        margin: auto auto;
+        background-image: url("../images/piggy_bank.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;  
+}
+
+.fun_ico_safe {
+    /* display: block; */
+    width: 160px;
+    height: 160px;
+    margin: auto auto;
+    background-image: url("../images/safe.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
 }
