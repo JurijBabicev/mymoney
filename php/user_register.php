@@ -5,6 +5,19 @@ $register_form_html="<div class=\"fun_ico_safe mb-3\"></div>
                         <div id=\"warning_message\">Message</div>
                         <button class=\"btn btn-primary mt-5 btn-lg fw-bold\" onClick=\" closeBox('warning_box')\">Close </button>
                     </div>
+
+                    <div class=\"success_msg\">
+                        <div class=\"card\">
+                            <h5 class=\"card-header\">Congratulation!</h5>
+                            <div class=\"card-body\" style=\"text-align: center;\">
+                                <h5 class=\"card-title\">User created successfully</h5>
+                                <p class=\"card-text\">Email address <span id=\"mail_adrs\">test@test.com</span> registered.<br />
+                                please use this email address to login.</p>
+                                <a href=\"#\" class=\"btn btn-success\" onClick=\"closeBox('success_msg'); reloadPage();\">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class=\"form-floating mb-3\">
                         <input type=\"email\" class=\"form-control\" id=\"usr_email\" placeholder=\"name@example.com\">
                         <label for=\"user_email\">Email address</label>

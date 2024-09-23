@@ -96,7 +96,8 @@ function saveNewUser(user_email, user_key) {
                             //alert(data);
                                 obj = JSON.parse(data);
                                 if(obj.status == "success"){
-                                alert (obj.msg);
+                                    document.querySelector(".success_msg").style = "display: inline-block;";
+                                    document.getElementById("mail_adrs").innerHTML = "<b>" + user_email + "</b>";
                                 }
                             }
                 });

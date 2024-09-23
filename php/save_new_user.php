@@ -45,6 +45,21 @@ $query = "INSERT INTO user_registered VALUES (?,?,?,?)";
 $stmt = $db->prepare($query);
 $stmt->bind_param("sssi", $new_id, $today_date, $its_null, $its_zero);
 $stmt->execute();
+
+$query = "INSERT INTO user_email VALUES (?,?)";
+$stmt = $db->prepare($query);
+$stmt->bind_param("ss", $new_id, $user_email);
+$stmt->execute();
+
+$query = "INSERT INTO user_name_surname VALUES (?,?,?)";
+$stmt = $db->prepare($query);
+$stmt->bind_param("sss", $new_id, $its_null, $its_null);
+$stmt->execute();
+
+$query = "INSERT INTO user_connections VALUES (?,?,?,?)";
+$stmt = $db->prepare($query);
+$stmt->bind_param("ssis", $new_id, $its_null, $its_zero, $its_null);
+$stmt->execute();
 //----------------------------------------------------------------
 
 $mainarray = array();

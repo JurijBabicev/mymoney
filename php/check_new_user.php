@@ -21,8 +21,7 @@ if (strlen($user_email) == 0) {
     // Loocking user
     $myQry = "SELECT usr_email.email_address 
                 FROM `user_email` AS usr_email
-                LEFT JOIN `user_email_link` AS usr_email_link ON usr_email.ID = usr_email_link.user_ID
-                LEFT JOIN `user_registered` AS user_real ON usr_email_link.user_ID = user_real.User_ID
+                LEFT JOIN `user_registered` AS user_real ON usr_email.ID = user_real.User_ID
                 WHERE `email_address` = '".$user_email."'
                 AND user_real.Deleted = 0
             ";
