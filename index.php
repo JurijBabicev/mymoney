@@ -24,7 +24,7 @@
           <label for="floatingPassword">Password</label>
         </div>
         <div class="d-grid gap-3">
-          <input class="btn btn-primary btn-lg fw-bold" type="submit" value="Submit">
+          <input class="btn btn-primary btn-lg fw-bold" type="submit" value="Submit" onClick="userLogin();">
           <input class="btn btn-outline-secondary btn-lg fw-bold" type="submit" value="Registration" onClick="newUser();">
         </div>
       </div>

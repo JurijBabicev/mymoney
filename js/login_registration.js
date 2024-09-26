@@ -108,6 +108,38 @@ function closeBox(box_class) {
     document.querySelector("." + box_class).style = "display: none;";
 }
 
+function userLogin() {
+    let usr_psw = document.getElementById('floatingPassword');
+    let usr_mail = document.getElementById('floatingInput');
+
+    if (usr_psw.value == "") {
+        usr_psw.style = "border-color: red;";
+        alert("Password can't be empty.");
+    } else if (usr_mail.value == "") {
+        usr_mail.style = "border-color: red;";
+        alert("Email address can't be empty.");
+    } else {
+        var url1 = "php/user_login.php";
+        var dataString = {"userPassword" : usr_psw.value, "userEmail" : usr_mail.value};
+            $.ajax({
+                        type: "POST",
+                        data: dataString,
+                        url: url1,
+                        success: function (data) {
+                        //alert(data);
+                            obj = JSON.parse(data);
+                            if(obj.status == "success"){
+                                if (obj.user_found == 'success') {
+                                    alert("user login success");
+                                } else {
+                                    alert("login fail");
+                                }
+                            }
+                        }
+            });
+        }
+}
+
 
 /*
 function accountCheckAndSave() {

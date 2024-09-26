@@ -1,4 +1,8 @@
 <?php
+session_start();
+date_default_timezone_set('Europe/London');
+setlocale(LC_ALL,'en_GB');
+
 
 $register_form_html="<div class=\"fun_ico_safe mb-3\"></div>
                     <div class=\"warning_box\">
@@ -13,7 +17,7 @@ $register_form_html="<div class=\"fun_ico_safe mb-3\"></div>
                                 <h5 class=\"card-title\">User created successfully</h5>
                                 <p class=\"card-text\">Email address <span id=\"mail_adrs\">test@test.com</span> registered.<br />
                                 please use this email address to login.</p>
-                                <a href=\"#\" class=\"btn btn-success\" onClick=\"closeBox('success_msg'); reloadPage();\">Go somewhere</a>
+                                <a href=\"#\" class=\"btn btn-success\" onClick=\"closeBox('success_msg'); reloadPage();\">Close</a>
                             </div>
                         </div>
                     </div>

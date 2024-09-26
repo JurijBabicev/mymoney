@@ -38,7 +38,7 @@ do {
 // ---------------------------------------------------------------
 
 // Store new user into database
-$today_date = date("Y-m-d h:i:s");
+$today_date = date("Y-m-d H:i:s");
 $its_null = null;
 $its_zero = 0;
 $query = "INSERT INTO user_registered VALUES (?,?,?,?)";
@@ -59,6 +59,11 @@ $stmt->execute();
 $query = "INSERT INTO user_connections VALUES (?,?,?,?)";
 $stmt = $db->prepare($query);
 $stmt->bind_param("ssis", $new_id, $its_null, $its_zero, $its_null);
+$stmt->execute();
+
+$query = "INSERT INTO user_key VALUES (?,?)";
+$stmt = $db->prepare($query);
+$stmt->bind_param("ss", $new_id, $user_key);
 $stmt->execute();
 //----------------------------------------------------------------
 
