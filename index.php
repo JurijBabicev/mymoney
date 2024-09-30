@@ -15,6 +15,18 @@
     <div class="container-sm menu_container">
       <div id="content_box">
         <div class="fun_ico_piggy mb-3"></div>
+
+        <div class="success_msg">
+          <div class="card">
+            <h5 class="card-header">Wrong login information</h5>
+            <div class="card-body" style="text-align: center;\">
+              <h5 class="card-title">User not found</h5>
+              <p class="card-text">Wrong Email address or user password.<br />Please try again.</p>
+              <a href="#" class="btn btn-success" onClick="closeBox('success_msg'); reloadPage();">Ok</a>
+            </div>
+          </div>
+        </div>
+
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">Email address</label>

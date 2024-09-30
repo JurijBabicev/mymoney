@@ -130,9 +130,9 @@ function userLogin() {
                             obj = JSON.parse(data);
                             if(obj.status == "success"){
                                 if (obj.user_found == 'success') {
-                                    alert("user login success");
+                                    window.location = "php/user_statistic_page.php"
                                 } else {
-                                    alert("login fail");
+                                    document.querySelector(".success_msg").style = "display: inline-block;";
                                 }
                             }
                         }
