@@ -33,12 +33,12 @@
         $found_user = "success";
         $row = mysqli_fetch_assoc($result);
     
-        $login_info = date("d-m-Y H:i:s", time())."\t\t\"".$user_name."\"\t\t log in \t\t".$_SERVER['REMOTE_ADDR']."\n";
+        // $login_info = date("d-m-Y H:i:s", time())."\t\t\"".$user_name."\"\t\t log in \t\t".$_SERVER['REMOTE_ADDR']."\n";
         
         //----------------------------
     } else {
         $found_user = "false";
-        $login_info = date("d-m-Y H:i:s", time())."\t\t\"".$user_name."\"\t\t log in FAULT \t\t".$_SERVER['REMOTE_ADDR']."\n";
+        // $login_info = date("d-m-Y H:i:s", time())."\t\t\"".$user_name."\"\t\t log in FAULT \t\t".$_SERVER['REMOTE_ADDR']."\n";
     }
 
     $mainarray['status'] = "success";
