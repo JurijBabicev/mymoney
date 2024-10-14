@@ -20,7 +20,7 @@
     
     include('connect_db.php');
 
-    $usr_qry = "SELECT usr_mail.ID, usr_mail.email_address, usr_key.key
+    $usr_qry = "SELECT usr_mail.ID AS user_id, usr_mail.email_address, usr_key.key
                 FROM `user_email` AS usr_mail
                 LEFT JOIN `user_key` AS usr_key ON usr_mail.ID = usr_key.ID
                 LEFT JOIN `user_registered` AS usr_reg ON usr_key.ID = usr_reg.User_ID
@@ -32,6 +32,8 @@
     if (mysqli_num_rows($result)) {
         $found_user = "success";
         $row = mysqli_fetch_assoc($result);
+
+        $_SESSION['user_id'] = $row['user_id'];
     
         // $login_info = date("d-m-Y H:i:s", time())."\t\t\"".$user_name."\"\t\t log in \t\t".$_SERVER['REMOTE_ADDR']."\n";
         
